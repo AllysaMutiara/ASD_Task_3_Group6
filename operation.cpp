@@ -1,7 +1,7 @@
 #include "list.h"
 #include "operation.h"
 #include "my_data.h"
- 
+
 
 void insertAndSort(List &L, infotype x) {
     /**
@@ -14,7 +14,6 @@ void insertAndSort(List &L, infotype x) {
     */
 
     //-------------your code here-------------
-    your code here
 
 
     //----------------------------------------
@@ -29,8 +28,22 @@ void deletebyID(List &L, int id_x) {
 
     address Prec, P;
     //-------------your code here-------------
-    your code here
+    P = findElm(L, id_x);
+     if (P != nullptr) {
 
+        if (L.first == L.last) {
+            L.first = nullptr;
+            L.last = nullptr;
+        } else if (P == L.first) {
+           deleteFirst(L,P);
+        } else if (P == L.last) {
+            deleteLast(L,P);
+        } else {
+            Prec = P->prev;
+            deleteAfter(L,Prec,P);
+        }
+
+        deallocate(P);
 
     //----------------------------------------
 }
@@ -43,7 +56,6 @@ void savePassedMember(List &L, List &L2){
     */
     address P;
     //-------------your code here-------------
-    your code here
 
 
     //----------------------------------------
