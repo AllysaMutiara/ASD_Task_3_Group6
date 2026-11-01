@@ -6,7 +6,7 @@ void createList(List &L) {
     * FS : set first(L) and last(L) with Null
     */
     //-------------your code here-------------
-    your code here
+
 
 
     //----------------------------------------
@@ -19,7 +19,7 @@ address allocate(infotype x) {
 
     address P;
     //-------------your code here-------------
-    your code here
+
 
 
     //----------------------------------------
@@ -31,8 +31,6 @@ void deallocate(address &P) {
     * FS : delete element pointed by P
     */
     //-------------your code here-------------
-    your code here
-
 
     //----------------------------------------
 }
@@ -43,7 +41,6 @@ void insertFirst(List &L, address P) {
     * FS : element pointed by P became the first element in List L
     */
     //-------------your code here-------------
-    your code here
 
 
     //----------------------------------------
@@ -55,7 +52,6 @@ void insertLast(List &L, address P) {
     * FS : element pointed by P became the last element in List L
     */
     //-------------your code here-------------
-    your code here
 
 
     //----------------------------------------
@@ -70,8 +66,6 @@ address findElm(List L, infotype x) {
 
     address P;
     //-------------your code here-------------
-    your code here
-
 
     //----------------------------------------
     return P;
@@ -83,7 +77,15 @@ void deleteFirst(List &L, address &P) {
     * FS : first element in List L is removed and is pointed by P
     */
     //-------------your code here-------------
-    your code here
+    P = L.first;
+    if (L.first == nullptr && L.last == nullptr){
+        L.first = nullptr;
+        L.last = nullptr;
+    }else{
+        L.first = P->next;
+        L.first->prev = nullptr;
+        P->next = nullptr;
+    }
 
 
 
@@ -96,8 +98,6 @@ void deleteLast(List &L, address &P) {
     * FS : last element in List L is removed and is pointed by P
     */
     //-------------your code here-------------
-    your code here
-
 
 
     //----------------------------------------
@@ -109,7 +109,6 @@ void printInfo(List L) {
     *      call the view_data function from my_data.h to print the info
     */
     //-------------your code here-------------
-    your code here
 
 
     //----------------------------------------
@@ -123,7 +122,6 @@ void insertAfter(List &L, address Prec, address P) {
     *      pointed by pointer Prec
     */
     //-------------your code here-------------
-    your code here
 
     //----------------------------------------
 
@@ -135,7 +133,6 @@ void deleteAfter(List &L, address Prec, address &P) {
     *      is removed and pointed by pointer P
     */
     //-------------your code here-------------
-    your code here
 
 
     //----------------------------------------
